@@ -1,0 +1,4 @@
+*.zip
+node_modules/
+create_database_schema/
+aws_config.json

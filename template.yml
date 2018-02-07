@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Update Database App.
+
+Resources:
+
+  Products:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: source/updateservicedb.handler
+      timeout: 200
+      Runtime: nodejs6.10
+      Events:
+        GetResource:
+          Type: Api
+          Properties:
+            Path: /test
+            Method: get

@@ -1,0 +1,13 @@
+{
+    "serviceInfo" : {
+
+        "host" : "newsapi.org",
+        "partial_path" : "/v2/top-headlines?sources=nfl-news&apiKey=",
+        "data_format_scripts" : {
+            "nfl_news_articles" : "../outgoing_service_transformers/nfl_news_formatter.js"
+        },
+        "schema_document" : "./database_schema_files/nfl_news.json",
+        "api_key_environment_variable_name" : "NFL_NEWS_API_KEY"
+                                                                
+    }
+}

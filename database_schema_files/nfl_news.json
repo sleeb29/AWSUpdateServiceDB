@@ -1,0 +1,34 @@
+{
+    "tables" : [
+
+        {
+            "TableName" : "nfl_news_articles",
+            "CreateSchema" : {
+
+                "TableName" : "nfl_news_articles",
+                "KeySchema" : [
+                    { "AttributeName": "article_name", "KeyType": "HASH"},
+                    { "AttributeName": "modified_at", "KeyType": "RANGE" }              
+                ],
+                "AttributeDefinitions" : [       
+                    { "AttributeName": "article_name", "AttributeType": "S" },
+                    { "AttributeName": "modified_at", "AttributeType": "S" }
+                ],
+                "ProvisionedThroughput": { 
+                    "ReadCapacityUnits": 50,
+                    "WriteCapacityUnits": 50
+                }
+
+            },
+            "Schema" : {
+                "article_name" : "S" ,
+                "teams" : "L",
+                "url" : "S",
+                "modified_at" : "S",
+                "description" : "S"
+            }
+
+        }    
+        
+    ]
+}
